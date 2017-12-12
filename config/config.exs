@@ -22,7 +22,7 @@ use Mix.Config
 #
 
 config :kuber_hex, Kuber.Hex,
-    adapter: Kuber.Hex.Adapters.Stripe,
+    adapter: Kuber.Hex.Gateways.Stripe,
     api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
     default_currency: "USD",
     worker_process_name: :stripe_gateway
