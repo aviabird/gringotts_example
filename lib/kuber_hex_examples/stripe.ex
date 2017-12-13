@@ -28,7 +28,7 @@ defmodule Kuber.Hex.Examples.Stripe do
   # Payment authorized ch_1BUaPLJMi9FIIlURigvYZDAi
   # :ok
   def authorize() do
-    case Billing.purchase(:payment_worker, Stripe, 2000, @card, billing_address: @address, description: "Amazing T-Shirt", gateway: "stripe") do
+    case Billing.purchase(:payment_worker, Stripe, 2000, @card, billing_address: @address, description: "Amazing T-Shirt") do
         {:ok,    %{authorization: authorization}} ->
           IO.puts("Payment authorized #{authorization}")
         {:error, %{code: :declined, reason: reason}} ->
