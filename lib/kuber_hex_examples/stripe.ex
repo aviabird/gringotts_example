@@ -3,6 +3,7 @@ defmodule Kuber.Hex.Examples.Stripe do
   # Alias for using the lib
   alias Kuber.Hex, as: Billing
   alias Billing.{CreditCard, Address, Worker, Gateways}
+  alias Kuber.Hex.Gateways.Stripe
 
   @card %CreditCard{
     name: "John Doe",
@@ -27,16 +28,13 @@ defmodule Kuber.Hex.Examples.Stripe do
   # Payment authorized ch_1BUaPLJMi9FIIlURigvYZDAi
   # :ok
   def authorize() do
-    case Billing.purchase(:stripe_gateway, 2000, @card, billing_address: @address, description: "Amazing T-Shirt") do
+    case Billing.purchase(:payment_worker, Stripe, 2000, @card, billing_address: @address, description: "Amazing T-Shirt", gateway: "stripe") do
         {:ok,    %{authorization: authorization}} ->
           IO.puts("Payment authorized #{authorization}")
-
         {:error, %{code: :declined, reason: reason}} ->
           IO.puts("Payment declined #{reason}")
-
         {:error, error} ->
           IO.inspect error
     end
   end
-
 end
