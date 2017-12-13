@@ -21,11 +21,17 @@ use Mix.Config
 #     config :logger, level: :info
 #
 
-config :kuber_hex, Kuber.Hex,
+# Keep the `key` name same as the adapter name
+config :kuber_hex, Kuber.Hex.Gateways.Stripe,
     adapter: Kuber.Hex.Gateways.Stripe,
     api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
-    default_currency: "USD",
-    worker_process_name: :stripe_gateway
+    default_currency: "USD"
+
+# Keep the `key` name same as the adapter name
+config :kuber_hex, Kuber.Hex.Gateways.Bogus,
+    adapter: Kuber.Hex.Gateways.Bogus,
+    api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
+    default_currency: "USD"
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
