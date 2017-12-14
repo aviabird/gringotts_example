@@ -4,11 +4,11 @@ defmodule Kuber.Hex.Examples.AuthorizeNet do
   alias Kuber.Hex.CreditCard
   alias Kuber.Hex, as: Billing
   
-  @card %{
-    name: "Joe",
+  @card %CreditCard{
     number: "5424000000000015",
-    expiration: "2020-12",
-    cvc: "999"
+    year: 2020,
+    month: 12,
+    verification_code: "999"
   }
 
   @opts [ refId: "123456",
@@ -26,6 +26,20 @@ defmodule Kuber.Hex.Examples.AuthorizeNet do
 
   def authorize() do
     case Billing.authorize(:payment_worker,AuthorizeNet, @amount, @card, @opts) do
+      {:ok, response} -> response
+      {:error, response} -> response
+    end
+  end
+
+  def purchase() do
+    case Billing.purchase(:payment_worker, AuthorizeNet, @amount, @card, @opts) do
+      {:ok, response} -> response
+      {:error, response} -> response
+    end
+  end
+
+  def capture(id) do
+    case Billing.capture(:payment_worker, AuthorizeNet, @amount, id, @opts) do
       {:ok, response} -> response
       {:error, response} -> response
     end
