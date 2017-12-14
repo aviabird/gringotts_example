@@ -33,6 +33,12 @@ config :kuber_hex, Kuber.Hex.Gateways.Bogus,
     api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
     default_currency: "USD"
 
+config :kuber_hex, Kuber.Hex.Gateways.AuthorizeNet,
+  adapter: Kuber.Hex.Gateways.AuthorizeNet,
+  name: "64jKa6NA",
+  transactionKey: "4vmE338dQmAN6m7B",
+  default_currency: "USD"
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.
