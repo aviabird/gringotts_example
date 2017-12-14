@@ -9,7 +9,7 @@ defmodule Kuber.Hex.Examples.WireCard do
     year: 2018,
     first_name: "Longbob",
     last_name: "Longsen",
-    verification_value: "123",
+    verification_code: "123",
     brand: "visa"
   }
 
@@ -19,7 +19,7 @@ defmodule Kuber.Hex.Examples.WireCard do
     year: 2018,
     first_name: "Longbob",
     last_name: "Longsen",
-    verification_value: "123",
+    verification_code: "123",
     brand: "visa"
   }
 
