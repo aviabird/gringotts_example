@@ -24,7 +24,7 @@ use Mix.Config
 # Keep the `key` name same as the adapter name
 config :kuber_hex, Kuber.Hex.Gateways.Stripe,
     adapter: Kuber.Hex.Gateways.Stripe,
-    api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
+    api_key: "sk_test_vIX41hayC0BKrPWQerLuOMld",
     default_currency: "USD"
 
 # Keep the `key` name same as the adapter name
