@@ -33,6 +33,11 @@ config :kuber_hex, Kuber.Hex.Gateways.Bogus,
     api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
     default_currency: "USD"
 
+config :kuber_hex, Kuber.Hex.Gateways.Paymill,
+    adapter: Kuber.Hex.Gateways.Paymill,
+    private_key: "8f16b021d4fb1f8d9263cbe346f32688",
+    public_key: "72294854039fcf7fd55eaeeb594577e7"
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.
