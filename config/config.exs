@@ -24,7 +24,7 @@ use Mix.Config
 # Keep the `key` name same as the adapter name
 config :kuber_hex, Kuber.Hex.Gateways.Stripe,
     adapter: Kuber.Hex.Gateways.Stripe,
-    api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
+    api_key: "sk_test_vIX41hayC0BKrPWQerLuOMld",
     default_currency: "USD"
 
 # Keep the `key` name same as the adapter name
@@ -37,6 +37,18 @@ config :kuber_hex, Kuber.Hex.Gateways.Paymill,
     adapter: Kuber.Hex.Gateways.Paymill,
     private_key: "8f16b021d4fb1f8d9263cbe346f32688",
     public_key: "72294854039fcf7fd55eaeeb594577e7"
+
+config :kuber_hex, Kuber.Hex.Gateways.AuthorizeNet,
+  adapter: Kuber.Hex.Gateways.AuthorizeNet,
+  name: "64jKa6NA",
+  transactionKey: "4vmE338dQmAN6m7B",
+  default_currency: "USD"
+
+config :kuber_hex, Kuber.Hex.Gateways.WireCard,
+    adapter: Kuber.Hex.Gateways.WireCard,
+    login:   "00000031629CA9FA",
+    password: "TestXAPTER",
+    signature: "00000031629CAFD5"
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
