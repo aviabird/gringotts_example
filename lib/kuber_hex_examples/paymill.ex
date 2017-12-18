@@ -5,10 +5,12 @@ defmodule Kuber.Hex.Examples.Paymill do
   alias Kuber.Hex.CreditCard
 
   @credit_card %CreditCard{
-    name: "Sagar Karwande",
+    first_name: "Sagar",
+    last_name: "Karwande",
     number: "4111111111111111",
-    expiration: {12, 2018},
-    cvc: 123
+    month: 12,
+    year: 2018,
+    verification_code: 123
   }
 
   @options [
