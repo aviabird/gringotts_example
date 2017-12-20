@@ -22,20 +22,20 @@ use Mix.Config
 #
 
 # Keep the `key` name same as the adapter name
-config :kuber_hex, Kuber.Hex.Gateways.Stripe,
-    adapter: Kuber.Hex.Gateways.Stripe,
+config :gringotts, Gringotts.Gateways.Stripe,
+    adapter: Gringotts.Gateways.Stripe,
     api_key: "sk_test_vIX41hayC0BKrPWQerLuOMld",
     default_currency: "USD"
 
 # Keep the `key` name same as the adapter name
-config :kuber_hex, Kuber.Hex.Gateways.Bogus,
-    adapter: Kuber.Hex.Gateways.Bogus,
+config :gringotts, Gringotts.Gateways.Bogus,
+    adapter: Gringotts.Gateways.Bogus,
     api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
     default_currency: "USD"
 
 
-config :kuber_hex, Kuber.Hex.Gateways.WireCard,
-    adapter: Kuber.Hex.Gateways.WireCard,
+config :gringotts, Gringotts.Gateways.WireCard,
+    adapter: Gringotts.Gateways.WireCard,
     login:   "00000031629CA9FA",
     password: "TestXAPTER",
     signature: "00000031629CAFD5"
