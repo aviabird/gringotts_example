@@ -1,8 +1,8 @@
-# Kuber Hex Examples
+# Gringotts Examples
 
 Repository contains example usage for all the payment gateway integartions in [gringotts](https://bitbucket.org/aviabird/gringotts)
 
-Kuber Hex is a payment processing library for Elixir. Based on [Shopify's](http://shopify.com) [ActiveMerchant](http://github.com/Shopify/active_merchant) ruby gem.
+Gringotts is a payment processing library for Elixir. Based on [Shopify's](http://shopify.com) [ActiveMerchant](http://github.com/Shopify/active_merchant) ruby gem.
 
 ## Installation
 
