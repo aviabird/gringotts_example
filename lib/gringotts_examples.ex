@@ -1,4 +1,4 @@
-defmodule Kuber.Hex.Examples do
+defmodule Gringotts.Examples do
   @moduledoc """
   Documentation for Test.
   """
