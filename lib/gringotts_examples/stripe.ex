@@ -1,8 +1,8 @@
-defmodule Kuber.Hex.Examples.Stripe do
+defmodule Gringotts.Examples.Stripe do
 
-  alias Kuber.Hex, as: Billing
+  alias Gringotts, as: Billing
   alias Billing.{CreditCard, Address, Worker, Gateways}
-  alias Kuber.Hex.Gateways.Stripe
+  alias Gringotts.Gateways.Stripe
 
   @payment %{
     name: "John Doe",

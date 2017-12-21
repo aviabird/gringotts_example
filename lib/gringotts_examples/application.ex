@@ -1,4 +1,4 @@
-defmodule Kuber.Hex.Examples.Application do
+defmodule Gringotts.Examples.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false

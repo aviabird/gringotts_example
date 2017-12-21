@@ -1,5 +1,5 @@
-# defmodule Kuber.Hex.Examples.Monei do
-#   alias Kuber.Hex.{CreditCard, Address, Worker, Gateways}
+# defmodule Gringotts.Examples.Monei do
+#   alias Gringotts.{CreditCard, Address, Worker, Gateways}
 
 #   @card %CreditCard{
 #     name: "Jo Doe",
@@ -16,7 +16,7 @@
 #   }
 
 #   def authorize() do
-#     case Kuber.Hex.authorize(:monei_gateway, 20.00, @card, description: "Two Amazing T-Shirts") do
+#     case Gringotts.authorize(:monei_gateway, 20.00, @card, description: "Two Amazing T-Shirts") do
 #       {:ok, %{id: id}} ->
 #         IO.puts("'PA' request succeeded with id: '#{id}'")
 #         id
@@ -30,7 +30,7 @@
 #   end
 
 #   def capture(referenceId) do
-#     case Kuber.Hex.capture_amount(:monei_gateway, 10.00, referenceId, description: "Just one T-Shirt") do
+#     case Gringotts.capture_amount(:monei_gateway, 10.00, referenceId, description: "Just one T-Shirt") do
 #       {:ok, %{id: id}} ->
 #         IO.puts("'CP' request succeeded with id: '#{id}'")
 #         id
@@ -44,7 +44,7 @@
 #   end
 
 #   def purchase() do
-#     case Kuber.Hex.purchase(:monei_gateway, 30.00, @card, description: "A jeans and 2 T-Shirts") do
+#     case Gringotts.purchase(:monei_gateway, 30.00, @card, description: "A jeans and 2 T-Shirts") do
 #       {:ok, %{id: id}} ->
 #         IO.puts("'DB' request succeeded with id: '#{id}'")
 #         id
@@ -59,6 +59,6 @@
 # end
 
 # """
-# alias Kuber.Hex.Examples.Monei
+# alias Gringotts.Examples.Monei
 # id = Monei.authorize
 # """

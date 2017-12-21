@@ -1,7 +1,7 @@
-defmodule Kuber.Hex.Examples.WireCard do
-  alias Kuber.Hex, as: Billing
+defmodule Gringotts.Examples.WireCard do
+  alias Gringotts, as: Billing
   alias Billing.{CreditCard, Address, Worker, Gateways}
-  alias Kuber.Hex.Gateways.WireCard
+  alias Gringotts.Gateways.WireCard
 
   @card %CreditCard{
     number: "4200000000000000",
@@ -46,7 +46,7 @@ defmodule Kuber.Hex.Examples.WireCard do
 
   # Testing main payments from iex console
   # $ iex -S mix
-  # iex(1)> alias Kuber.Hex.Examples.WireCard
+  # iex(1)> alias Gringotts.Examples.WireCard
   # iex(2)> WireCard.authorize()
   # Payment authorized ch_1BUaPLJMi9FIIlURigvYZDAi
   # :ok
