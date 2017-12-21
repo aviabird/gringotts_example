@@ -50,6 +50,11 @@ config :gringotts, Gringotts.Gateways.WireCard,
     password: "TestXAPTER",
     signature: "00000031629CAFD5"
 
+config :gringotts, Gringotts.Gateways.Trexle,
+    adapter: Gringotts.Gateways.Trexle,
+    api_key: "J5RGMpDlFlTfv9mEFvNWYoqHufyukPP4",
+    default_currency: "USD"
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.
