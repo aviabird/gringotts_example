@@ -27,16 +27,16 @@ defmodule Gringotts.Examples.Trexle do
     Billing.purchase(:payment_worker, Trexle, 50, @payment, @options)
   end
 
-  def capture() do
+  def capture(charge_token) do
+    Billing.capture(:payment_worker, Trexle, charge_token, 50)
   end
 
-  def void() do
-  end
-
-  def refund() do
+  def refund(charge_token) do
+    Billing.refund(:payment_worker, Trexle, 50, charge_token,@options)
   end
 
   def store() do
+    Billing.store(:payment_worker, Trexle, @payment)
   end
 
 end
