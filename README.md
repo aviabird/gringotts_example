@@ -1,6 +1,6 @@
 # Gringotts Examples
 
-Repository contains example usage for all the payment gateway integartions in [kuber hex](https://github.com/aviabird/gringotts)
+Repository contains example usage for all the payment gateway integartions in [Gringotts](https://github.com/aviabird/gringotts)
 
 Gringotts is a payment processing library for Elixir. Based on [Shopify's](http://shopify.com) [ActiveMerchant](http://github.com/Shopify/active_merchant) ruby gem.
 
@@ -9,6 +9,6 @@ Gringotts is a payment processing library for Elixir. Based on [Shopify's](http:
 * `mix deps.get`
 * `mix test`
 
-## TODO's 
+## TODO's
 
 * Add test cases
