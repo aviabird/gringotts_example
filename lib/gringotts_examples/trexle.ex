@@ -17,7 +17,7 @@ defmodule Gringotts.Examples.Trexle do
     address_country: "CA"
   }
 
-  @options [currency: "usd"]
+  @options [currency: "usd", email: "john@trexle.com", ip_address: "66.249.79.118", description: "Store Purchase 1437598192"]
 
   def authorize() do
     Billing.authorize(:payment_worker, Trexle, 50, @payment, @options)    
