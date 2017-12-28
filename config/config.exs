@@ -20,6 +20,8 @@ use Mix.Config
 #
 #     config :logger, level: :info
 #
+config :gringotts, :global_config,
+    mode: :test
 
 # Keep the `key` name same as the adapter name
 config :gringotts, Gringotts.Gateways.Stripe,
@@ -33,6 +35,11 @@ config :gringotts, Gringotts.Gateways.Bogus,
     api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
     default_currency: "USD"
 
+config :gringotts, Gringotts.Gateways.AuthorizeNet,
+  adapter: Gringotts.Gateways.AuthorizeNet,
+  name: "64jKa6NA",
+  transaction_key: "4vmE338dQmAN6m7B",
+  default_currency: "USD"
 
 config :gringotts, Gringotts.Gateways.WireCard,
     adapter: Gringotts.Gateways.WireCard,
