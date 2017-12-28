@@ -20,30 +20,30 @@ defmodule Gringotts.Examples.Stripe do
   @options [currency: "usd"]
 
   def authorize() do
-    Billing.authorize(:payment_worker, Stripe, 5, @payment, @options)    
+    Billing.authorize(Stripe, 5, @payment, @options)    
   end
 
   def purchase() do
-    Billing.purchase(:payment_worker, Stripe, 5, @payment, @options)
+    Billing.purchase(Stripe, 5, @payment, @options)
   end
 
   def capture() do
     id = "ch_1BYvGkBImdnrXiZwet3aKkQE"
-    Billing.capture(:payment_worker, Stripe, id, 5)
+    Billing.capture(Stripe, id, 5)
   end
 
   def void() do
     id = "ch_1BYvGkBImdnrXiZwet3aKkQE"
-    Billing.void(:payment_worker, Stripe, id)
+    Billing.void(Stripe, id)
   end
 
   def refund() do
     id = "ch_1BYvGkBImdnrXiZwet3aKkQE"
-    Billing.refund(:payment_worker, Stripe, 5, id)
+    Billing.refund(Stripe, 5, id)
   end
 
   def store() do
-    Billing.store(:payment_worker, Stripe, @payment)
+    Billing.store(Stripe, @payment)
   end
 
 end

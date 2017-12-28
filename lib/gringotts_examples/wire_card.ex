@@ -51,35 +51,35 @@ defmodule Gringotts.Examples.WireCard do
   # Payment authorized ch_1BUaPLJMi9FIIlURigvYZDAi
   # :ok
   def authorize() do
-    Billing.authorize(:payment_worker, WireCard, 100, @card, @options)    
+    Billing.authorize(WireCard, 100, @card, @options)    
   end
 
   def capture() do
     auth_code = authorize() |> parse_and_get_auth_code
-    Billing.capture(:payment_worker, WireCard, auth_code, 100, @options)
+    Billing.capture(WireCard, auth_code, 100, @options)
   end
 
   def purchase() do
-    Billing.purchase(:payment_worker, WireCard, 100, @card, @options)
+    Billing.purchase(WireCard, 100, @card, @options)
   end
 
   def purchase_using_auth_code() do
     auth_code = authorize() |> parse_and_get_auth_code
-    Billing.purchase(:payment_worker, WireCard, 100, auth_code, @options)
+    Billing.purchase(WireCard, 100, auth_code, @options)
   end
 
   def void() do
     auth_code = authorize() |> parse_and_get_auth_code
-    Billing.void(:payment_worker, WireCard, auth_code, @options)
+    Billing.void(WireCard, auth_code, @options)
   end
 
   def refund() do
     auth_code = purchase() |> parse_and_get_guid_for_refund
-    Billing.refund(:payment_worker, WireCard, 100, auth_code, @options)
+    Billing.refund(WireCard, 100, auth_code, @options)
   end
 
   def store() do
-    Billing.store(:payment_worker, WireCard, @card, @options)
+    Billing.store(WireCard, @card, @options)
   end
 
   # ================ Temp Private Methods for parsing unparsed response =======
