@@ -46,12 +46,6 @@ config :gringotts, Gringotts.Gateways.WireCard,
     login:   "00000031629CA9FA",
     password: "TestXAPTER",
     signature: "00000031629CAFD5"
-    
-config :kuber_hex, Kuber.Hex.Gateways.AuthorizeNet,
-  adapter: Kuber.Hex.Gateways.AuthorizeNet,
-  name: "64jKa6NA",
-  transactionKey: "4vmE338dQmAN6m7B",
-  default_currency: "USD"
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
