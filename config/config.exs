@@ -33,13 +33,13 @@ config :gringotts, Gringotts.Gateways.Bogus,
     api_key: "sk_test_mnrVg6z2G0HeDzwy5gxJfmfP",
     default_currency: "USD"
 
-config :kuber_hex, Kuber.Hex.Gateways.Paymill,
-    adapter: Kuber.Hex.Gateways.Paymill,
+config :gringotts, Gringotts.Gateways.Paymill,
+    adapter: Gringotts.Gateways.Paymill,
     private_key: "8f16b021d4fb1f8d9263cbe346f32688",
     public_key: "72294854039fcf7fd55eaeeb594577e7"
 
-config :kuber_hex, Kuber.Hex.Gateways.AuthorizeNet,
-  adapter: Kuber.Hex.Gateways.AuthorizeNet,
+config :gringotts, Gringotts.Gateways.AuthorizeNet,
+  adapter: Gringotts.Gateways.AuthorizeNet,
   name: "64jKa6NA",
   transactionKey: "4vmE338dQmAN6m7B",
   default_currency: "USD"
