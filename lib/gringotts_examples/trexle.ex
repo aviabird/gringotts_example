@@ -1,7 +1,7 @@
 defmodule Gringotts.Examples.Trexle do
 
   alias Gringotts, as: Billing
-  alias Billing.{CreditCard, Address, Worker, Gateways}
+  alias Billing.{CreditCard, Address}
   alias Gringotts.Gateways.Trexle
 
   @payment %CreditCard{
