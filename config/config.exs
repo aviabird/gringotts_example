@@ -40,6 +40,12 @@ config :gringotts, Gringotts.Gateways.WireCard,
     password: "TestXAPTER",
     signature: "00000031629CAFD5"
 
+config :gringotts, Gringotts.Gateways.Monei,
+  adapter: Gringotts.Gateways.Monei,
+  userId: "8a829417539edb400153c1eae83932ac",
+  password: "6XqRtMGS2N",
+  entityId: "8a829417539edb400153c1eae6de325e"
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.
