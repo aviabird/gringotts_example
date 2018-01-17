@@ -1,7 +1,7 @@
 defmodule Gringotts.Examples.Trexle do
 
   alias Gringotts, as: Billing
-  alias Billing.{CreditCard, Address, Money}
+  alias Billing.{CreditCard, Address}
   alias Gringotts.Gateways.Trexle
 
   @payment %CreditCard{
@@ -24,7 +24,7 @@ defmodule Gringotts.Examples.Trexle do
     phone: "(555)555-5555"
   }
 
-  @amount %Money{amount: 50, currency: "USD"}
+  @amount %{amount: Decimal.new(50), currency: "USD"}
 
   @options [ email: "john@trexle.com",
              ip_address: "66.249.79.118",
