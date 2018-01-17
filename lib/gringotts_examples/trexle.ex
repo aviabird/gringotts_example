@@ -1,7 +1,7 @@
 defmodule Gringotts.Examples.Trexle do
 
   alias Gringotts, as: Billing
-  alias Billing.{CreditCard, Address}
+  alias Billing.{CreditCard, Address, Money}
   alias Gringotts.Gateways.Trexle
 
   @payment %CreditCard{
@@ -24,25 +24,27 @@ defmodule Gringotts.Examples.Trexle do
     phone: "(555)555-5555"
   }
 
+  @amount %Money{amount: 50, currency: "USD"}
+
   @options [ email: "john@trexle.com",
              ip_address: "66.249.79.118",
              billing_address: @address,
              description: "Store Purchase 1437598192"]
 
   def authorize() do
-    Billing.authorize(Trexle, 50, @payment, @options)
+    Billing.authorize(Trexle, @amount, @payment, @options)
   end
 
   def purchase() do
-    Billing.purchase(Trexle, 50, @payment, @options)
+    Billing.purchase(Trexle, @amount, @payment, @options)
   end
 
   def capture(charge_token) do
-    Billing.capture(Trexle, charge_token, 50)
+    Billing.capture(Trexle, charge_token, @amount)
   end
 
   def refund(charge_token) do
-    Billing.refund(Trexle, 50, charge_token, @options)
+    Billing.refund(Trexle, @amount, charge_token, @options)
   end
 
   def store() do
